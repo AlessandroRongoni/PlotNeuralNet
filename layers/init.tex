@@ -1,11 +1,28 @@
-%\ProvidesPackage{init}
-\usetikzlibrary{quotes,arrows.meta}
-\usetikzlibrary{positioning}
+% init.tex
+\RequirePackage[a4paper, margin=2.5cm]{geometry} % Aumenta i margini complessivi
+\usetikzlibrary{quotes,arrows.meta,positioning,calc,3d}
 
 \def\edgecolor{rgb:blue,4;red,1;green,4;black,3}
-\newcommand{\midarrow}{\tikz \draw[-Stealth,line width =0.8mm,draw=\edgecolor] (-0.3,0) -- ++(0.3,0);}
+\newcommand{\midarrow}{%
+  \tikz \draw[-Stealth,line width=0.8mm,draw=\edgecolor] (-0.3,0) -- ++(0.3,0);
+}
 
 \usepackage{Ball}
 \usepackage{Box}
 \usepackage{RightBandedBox}
 
+% Stili generali
+\tikzset{
+  every node/.style={
+    font=\scriptsize,   % Font piccolo (o \footnotesize, \tiny, ecc.)
+    outer sep=3pt,      % spazio esterno
+    inner sep=3pt,      % spazio interno
+    align=center        % testo centrato su più righe
+  },
+  every path/.style={
+    line width=0.8pt
+  },
+  every pic/.style={
+    text depth=0pt
+  }
+}

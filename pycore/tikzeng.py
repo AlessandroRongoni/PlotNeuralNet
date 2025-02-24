@@ -208,4 +208,3 @@ def to_generate( arch, pathname="file.tex" ):
             f.write( c )
      
 
-

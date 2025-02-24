@@ -25,7 +25,8 @@ def block_2ConvPool( name, botton, top, s_filer=256, n_filer=64, offset="(1,0,0)
     to_connection( 
         "{}".format( botton ), 
         "ccr_{}".format( name )
-        )
+        ),
+    
     ]
 
 
